@@ -1,9 +1,9 @@
 class Contact {
 
-    constructor(number, name, email) {
-        this.number = number;
+    constructor(name, email, number) {
         this.name = name;
         this.email = email;
+        this.number = number;
         this.dateCreated = new Date().toLocaleString();
     }
 
@@ -11,11 +11,11 @@ class Contact {
         return this.number.toString();
     }
 
-    setInfo() {
+    getInfo() {
         const value = {Name: this.name, Email: this.email, DateCreated: this.dateCreated};
         return value;
     }
 }
 
 
-export {Contact};
+module.exports = {Contact: Contact};
